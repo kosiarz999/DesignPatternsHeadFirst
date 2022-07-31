@@ -1,17 +1,17 @@
-package strategy.duck;
+package strategy.duck.types;
 
 import strategy.duck.fly.LatamBoMamSkrzydla;
 import strategy.duck.quack.Kwacz;
 
-public class PlaskonosKaczka extends Kaczka{
+public class DzikaKaczka extends Kaczka {
 
-    public PlaskonosKaczka() {
+    public DzikaKaczka() {
         kwakanieInterface = new Kwacz();
         latanieInterface = new LatamBoMamSkrzydla();
     }
 
     @Override
     public void wyswietl() {
-        System.out.println("Oto kaczka płaskonosa.");
+        System.out.println("Oto dzika kaczka.");
     }
 }

@@ -1,4 +1,4 @@
-package strategy.duck;
+package strategy.duck.types;
 
 import strategy.duck.fly.NieLatam;
 import strategy.duck.quack.Piszcz;

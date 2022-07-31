@@ -1,5 +1,7 @@
-import strategy.duck.*;
+package strategy.duck;
+
 import strategy.duck.fly.LotZNapedemRakietowym;
+import strategy.duck.types.*;
 
 public class Main {
 
@@ -8,11 +10,13 @@ public class Main {
         dzika.wyswietl();
         dzika.wykonajKwacz();
         dzika.wykonajLec();
+        System.out.println();
 
         Kaczka gumowa = new GumowaKaczka();
         gumowa.wyswietl();
         gumowa.wykonajKwacz();
         gumowa.wykonajLec();
+        System.out.println();
 
         Kaczka model = new ModelKaczki();
         model.wyswietl();
@@ -20,11 +24,13 @@ public class Main {
         model.wykonajLec();
         model.setLatanieInterface(new LotZNapedemRakietowym());
         model.wykonajLec();
+        System.out.println();
 
         Kaczka wabik = new WabikKaczka();
         wabik.wyswietl();
         wabik.wykonajKwacz();
         wabik.wykonajLec();
+        System.out.println();
 
         Kaczka plaskonos = new PlaskonosKaczka();
         plaskonos.wyswietl();

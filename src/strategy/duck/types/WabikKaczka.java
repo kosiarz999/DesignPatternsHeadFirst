@@ -1,16 +1,16 @@
-package strategy.duck;
+package strategy.duck.types;
 
 import strategy.duck.fly.NieLatam;
 import strategy.duck.quack.Kwacz;
 
-public class ModelKaczki extends Kaczka {
-    public ModelKaczki() {
+public class WabikKaczka extends Kaczka {
+    public WabikKaczka() {
         kwakanieInterface = new Kwacz();
         latanieInterface = new NieLatam();
     }
 
     @Override
     public void wyswietl() {
-        System.out.println("To tylko model kaczki.");
+        System.out.println("Oto wabik.");
     }
 }

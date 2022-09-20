@@ -1,7 +1,9 @@
 # Wzorce projektowe
+
 Wzorce opracowane na podstawie książki "Rusz głową! Wzorce projektowe".
  
 ## Wzorzec Strategia (*Strategy*)
+
 Definiuje rodziny algorytmów, dokonuje ich hermetyzacji (tworzy z nich osobne klasy) i powoduje, że są one w pełni wymienne. Wzorzec pozwala na modyfikację danego algorytmu niezależnie korzystających z nich klientów.
 
 Wzorzec został wytłumaczony na przykładzie skomponowania różnych rodzajów kaczek z klas implementujących interfejsy `KwakanieInterfejs` i `LatanieInterfejs`. 
@@ -16,9 +18,11 @@ Wzorzec został wytłumaczony na przykładzie skomponowania różnych rodzajów 
   Kaczki zamiast dziedziczyć po wybranych klasach otrzymują określone zachowania poprzez kompozycję. Pola klasy odwołują się bezpośrednio do interfejsów, w ten sposób można bezpośrenio odwoływać się do klas implementujących te interfejsy i skomponować kaczkę z "klocków", czyli klas reprezentujących określone zachowania.   
 
 ## Wzorzec Obserwator (*Observer*)
+
 Definiuje między obiektami relację jeden-do-wielu w taki sposób, że kiedy wybrany obiekt zmienia swój stan, wszystkie jego obiekty zależne zostają o tym powiadomione i automatycznie zaktualizowane. 
 
 ### Wykorzystywane reguły programowania obiektowego 
+
 * **Poddawaj hermetyzacji to, co się zmienia.**  
   Elementami, które we wzorcu Obserwator podlegają zmianom są: stan obiektu obserwowanego oraz ilość i rodzaj obiektów obserwujących. Zgodznie z założeniami wzorca możesz modyfikować obiekty, które są zależne od stanu obiektu obserwowanego bez konieczności modyfikacji samego obiektu obserwowanego. 
 * **Skoncentruj się na tworzeniu interfejsów, a nie implementacji.**  
@@ -29,3 +33,13 @@ Definiuje między obiektami relację jeden-do-wielu w taki sposób, że kiedy wy
   Jedyną informacją, jaką obiekt obserwowany posiada o obiekcie obserwującym jest to, że obiekt obserwujący posiada pewien określony interfejs.  
   Nowych obserwatorów możemy dodawać w dowolnym momencie i nie wymaga to modyfikacji obiektu obserwowanego.  
   Zarówno obiekty obserwowane jak i obiekty obserwujące mogą być niezależnie od siebie wielokrotnie wykorzystywane i modyfikowane bez żadnego wpływu na siebie (o ile poprawnie implementują interfejsy).
+  
+## Wzorzec Dekorator (*Decorator*)
+
+Pozwala na dynamiczne przydzielanie danemu obiektowi nowych zachowań. Dekoratory dają elastyczność podobną do tej, jaką daje dziedziczenie, oferując jednak w zamian znacznie rozszerzoną funkcjonalność.
+
+### Wykorzystywane reguły programowania obiektowego
+
+* **Zasada otwarte-zamknięte.**  
+  Klasy powinny być otwarte na rozbudowę, ale zamknięte na modyfikacje. 
+  

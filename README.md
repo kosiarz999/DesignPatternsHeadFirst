@@ -40,6 +40,18 @@ Pozwala na dynamiczne przydzielanie danemu obiektowi nowych zachowań. Dekorator
 
 ### Wykorzystywane reguły programowania obiektowego
 
-* **Zasada otwarte-zamknięte.**  
-  Klasy powinny być otwarte na rozbudowę, ale zamknięte na modyfikacje. 
+* **Zasada otwarte-zamknięte** (*OCP - Open-Closed Principle*)  
+  *Klasy powinny być otwarte na rozbudowę, ale zamknięte na modyfikacje.* 
+  
+## Wzorzec Metoda Wytwórcza (*Factory Method*)
+
+Definiuje interfejs pozwalający na tworzenie obiektów, ale pozwala klasom podrzędnym decydować, jakiej klasy obiekt zostanie utworzony. Wzorzec Metoda Wytwórcza przekazuje odpowiedzialność za tworzenie obiektów do klas podrzędnych. 
+
+### Wykorzystywane reguły programowania obiektowego
+
+* **Reguła odwrócenia zależności** (*DIP - Dependency Inversion Principle*)  
+*Uzależniaj kod od abstrakcji, a nie od konkretnych klas.* Albo, jak stoi w "Zwinnym wytwarzaniu oprogramowania":  
+  *Moduły wysokopoziomowe nie powinny zależeć od modułów niskopoziomowych. I jedne, i drugie powinny zależeć od abstrakcji.*  
+Prostsza implementacja tego kodu nie korzystająca z Metody Wytwórczej uzależniłaby tworzenie obiektów konkretnych produktów od klasy `Pizzeria`. Klasy konkretnych produktów to *moduły niskopoziomowe*, podczas gdy klasa `Pizzeria` jest *modułem wysokopoziomowym*, ponieważ jej zachowanie jest determinowane generowaniem składników niskiego poziomu.  
+Przy zastosowaniu wzorca Metody Wytwórczej konkretne klasy reprezentujące różne gatunki pizzy zostały "uzależnione" od klasy abstrakcyjnej `Pizza`. Jednocześnie konkretne fabryki (`AmerykanskaPizzeria` oraz `WloskaPizzeria`) wykorzystują klasę abstrakcyjną `Pizza` do zwracania obiektów konkretnych produktów. Czyli uniezależniliśmy od siebie składniki niskopoziomowe i wysokopoziomowe. Teraz zależą one od *abstrakcji* jaką jest klasa abstrakcyjna `Pizza`.
   
